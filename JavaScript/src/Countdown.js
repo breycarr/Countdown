@@ -12,7 +12,9 @@ Countdown.prototype.showBoard = function() {
 }
 
 Countdown.prototype.consonant = function() {
-  return this.consonants[Math.floor(Math.random()*this.consonants.length)];
+  letter = this.consonants[Math.floor(Math.random()*this.consonants.length)];
+  this.board.push(letter)
+  return letter
 }
 
 Countdown.prototype.vowel = function() {

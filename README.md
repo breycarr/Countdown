@@ -17,7 +17,7 @@ The game should start with a blank board
 ```
 Object | Message
 -|-
-Game | board
+Game | showBoard
 
 ```
 As a player
@@ -42,3 +42,6 @@ As a player
 so I know what letters I have to play with
 I would like my letters to be displayed as I ask for them
 ```
+Object | Message
+-|-
+Game | showBoard
