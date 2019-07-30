@@ -12,4 +12,8 @@ describe("Countdown", function() {
   it("should return a consonant when called", function() {
     expect(game.consonant()).toMatch(/[B-DF-HJ-NP-TV-Z]/)
   });
+
+  it("should return a vowel when called", function() {
+    expect(game.vowel()).toMatch(/[AEIOU]/)
+  });
 });
