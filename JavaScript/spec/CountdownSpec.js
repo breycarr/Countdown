@@ -10,6 +10,6 @@ describe("Countdown", function() {
   });
 
   it("should return a consonant when called", function() {
-    expect(game.consonant()).toEqual("F")
+    expect(game.consonant()).toMatch(/[B-DF-HJ-NP-TV-Z]/)
   });
 });
