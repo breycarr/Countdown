@@ -18,19 +18,27 @@ The game should start with a blank board
 Object | Message
 -|-
 Game | board
+
 ```
 As a player
 So that I can play a game of countdown
-I want to ask for a consonant or a vowel
+I want to ask for a consonant and receive a consonant
 ```
-
 Object | Message
 -|-
 game | consonant
+
+```
+As a player
+So that I can play a game of countdown
+I want to ask for a vowel and receive a vowel
+```
+Object | Message
+-|-
 game | vowel
 
 ```
 As a player
 so I know what letters I have to play with
-I would like my letters to be displayed
+I would like my letters to be displayed as I ask for them
 ```
