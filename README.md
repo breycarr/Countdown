@@ -8,3 +8,29 @@ Since then, I've learned far more about test driven development, and code qualit
 So, once more, with JavaScript
 
 ## Installation
+
+## User Stories
+```
+As a player
+To start a new game of Countdown
+The game should start with a blank board
+```
+Object | Message
+-|-
+Game | board
+```
+As a player
+So that I can play a game of countdown
+I want to ask for a consonant or a vowel
+```
+
+Object | Message
+-|-
+game | consonant
+game | vowel
+
+```
+As a player
+so I know what letters I have to play with
+I would like my letters to be displayed
+```
