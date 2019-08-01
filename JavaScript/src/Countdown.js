@@ -18,5 +18,7 @@ Countdown.prototype.consonant = function() {
 }
 
 Countdown.prototype.vowel = function() {
-  return this.vowels[Math.floor(Math.random()*this.vowels.length)];
+  letter = this.vowels[Math.floor(Math.random()*this.vowels.length)];
+  this.board.push(letter)
+  return letter
 }
