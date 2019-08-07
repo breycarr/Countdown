@@ -8,6 +8,7 @@ describe("Countdown", function() {
   it("should start with an empty board", function() {
     expect(game.showBoard()).toEqual([]);
   });
+
   describe("#consonant", function() {
     it("should return a consonant when called", function() {
       expect(game.consonant()).toMatch(/[B-DF-HJ-NP-TV-Z]/)
@@ -28,6 +29,17 @@ describe("Countdown", function() {
       expect(game.showBoard().length).toEqual(1)
       expect(game.showBoard().shift()).toMatch(/[AEIOU]/)
 
+    });
+  });
+
+  describe("board length", function() {
+    it("should be a maximum of 9 letters", function() {
+      for (var i = 0; i < 4; i++)
+        game.vowel();
+      for (var i = 0; i < 5; i++)
+        game.consonant();
+      console.log(game.showBoard())
+      expect( function() { game.consonant(); }).toThrow('The board can only be 9 letters!')
     });
   });
 });
