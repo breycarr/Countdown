@@ -5,43 +5,18 @@ This project was originally based on my wife's enjoyment of "8 Out of 10 Cats do
 
 Since then, I've learned far more about test driven development, and code quality.
 
-So, once more, with JavaScript
+So, in order to practice TDD and JavaScript, I decided to go back to the start of the project and begin again in JavaScript.
 
 ## Installation
 
-## User Stories
-```
-As a player
-To start a new game of Countdown
-The game should start with a blank board
-```
-Object | Message
--|-
-Game | showBoard
+`git clone` this repository
 
-```
-As a player
-So that I can play a game of countdown
-I want to ask for a consonant and receive a consonant
-```
-Object | Message
--|-
-game | consonant
+## How to play
 
-```
-As a player
-So that I can play a game of countdown
-I want to ask for a vowel and receive a vowel
-```
-Object | Message
--|-
-game | vowel
+The app uses the rules of the long-running British TV series [Countdown](https://www.channel4.com/programmes/countdown) (also known as 'Letters and Numbers', 'Numbers and Letters' and 'A Word or 2' in different parts of the world)
 
-```
-As a player
-so I know what letters I have to play with
-I would like my letters to be displayed as I ask for them
-```
-Object | Message
--|-
-Game | showBoard
+The player chooses between two stacks of letter tiles, one containing vowels and the other consonants, which reveals the top tile from that stack and places it in the board. This is done nine times and the final grouping must contain at least three vowels and four consonants. The player must then form the longest single word they can, using the nine revealed letters; no letter may be used more often than it appears in the selection.
+
+The player scores one point per letter for a valid word, or 18 points if they have used all nine.
+
+Any word which appears in the Oxford Dictionary of English is valid, according to the Oxford Dictionaries API
