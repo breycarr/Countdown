@@ -38,7 +38,6 @@ describe("Countdown", function() {
         game.vowel();
       for (var i = 0; i < 5; i++)
         game.consonant();
-      console.log(game.showBoard())
       expect( function() { game.consonant(); }).toThrow('The board can only be 9 letters!')
     });
   });
