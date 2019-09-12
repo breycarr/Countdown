@@ -13,6 +13,7 @@ describe("Countdown", function() {
     it("should return a consonant when called", function() {
       expect(game.consonant()).toMatch(/[B-DF-HJ-NP-TV-Z]/)
     });
+
     it("should add a consonant to the board", function() {
       game.consonant()
       expect(game.showBoard().length).toEqual(1)
@@ -24,11 +25,11 @@ describe("Countdown", function() {
     it("should return a vowel when called", function() {
       expect(game.vowel()).toMatch(/[AEIOU]/)
     });
+
     it("should add a vowel to the board", function() {
       game.vowel()
       expect(game.showBoard().length).toEqual(1)
       expect(game.showBoard().shift()).toMatch(/[AEIOU]/)
-
     });
   });
 
@@ -40,6 +41,14 @@ describe("Countdown", function() {
         game.consonant();
       expect(function() { game.consonant(); }).toThrow('The board can only be 9 letters!')
     });
+
+    it("should only allow a maximum of 6 consonants", function() {
+      for (var i = 0; i < 6; i++) { 
+        game.consonant(); 
+      }
+      expect(function() { game.consonant(); }).toThrow('The board can only have 6 consonants');
+    });
+
     it("should only allow a maximum of 5 vowels", function() {
       for (var i = 0; i < 5; i++)
         game.vowel();

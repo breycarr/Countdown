@@ -1,5 +1,6 @@
 function Countdown() {
   this.board = [];
+  this.numberOfConsonants = 0
   this.numberOfVowels = 0
   this.consonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L",
                      "M", "N", "P", "Q", "R", "S", "T", "V", "W",
@@ -31,8 +32,13 @@ Countdown.prototype.boardLengthCheck = function(type) {
 
 Countdown.prototype.consonant = function() {
   this.boardLengthCheck();
+
+  if (this.numberOfConsonants >= 6) {
+    throw 'The board can only have 6 consonants';
+  }
   
   var letter = this.getLetter("consonant");
+  this.numberOfConsonants += 1
   return letter;
 }
 
