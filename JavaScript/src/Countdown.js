@@ -1,5 +1,6 @@
 function Countdown() {
   this.board = [];
+  this.numberOfVowels = 0
   this.consonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L",
                      "M", "N", "P", "Q", "R", "S", "T", "V", "W",
                      "X", "Y", "Z"
@@ -17,7 +18,9 @@ Countdown.prototype.getLetter = function(type) {
     selection = this.vowels;
   }
 
-  return selection[Math.floor(Math.random()*selection.length)];
+  var letter = selection[Math.floor(Math.random()*selection.length)];
+  this.board.push(letter);
+  return letter
 }
 
 Countdown.prototype.boardLengthCheck = function(type) {
@@ -28,16 +31,19 @@ Countdown.prototype.boardLengthCheck = function(type) {
 
 Countdown.prototype.consonant = function() {
   this.boardLengthCheck();
-
+  
   var letter = this.getLetter("consonant");
-  this.board.push(letter);
   return letter;
 }
 
 Countdown.prototype.vowel = function() {
   this.boardLengthCheck();
 
+  if (this.numberOfVowels >= 5) {
+    throw 'The board can only have 5 vowels';
+  }
+
   var letter = this.getLetter("vowel");
-  this.board.push(letter);
+  this.numberOfVowels += 1
   return letter;
 }

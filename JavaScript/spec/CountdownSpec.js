@@ -38,7 +38,12 @@ describe("Countdown", function() {
         game.vowel();
       for (var i = 0; i < 5; i++)
         game.consonant();
-      expect( function() { game.consonant(); }).toThrow('The board can only be 9 letters!')
+      expect(function() { game.consonant(); }).toThrow('The board can only be 9 letters!')
+    });
+    it("should only allow a maximum of 5 vowels", function() {
+      for (var i = 0; i < 5; i++)
+        game.vowel();
+      expect(function() { game.vowel(); }).toThrow('The board can only have 5 vowels');
     });
   });
 });
