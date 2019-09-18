@@ -24,7 +24,7 @@ Countdown.prototype.getLetter = function(type) {
   return letter
 }
 
-Countdown.prototype.boardLengthCheck = function(type) {
+Countdown.prototype.boardLengthCheck = function() {
   if (this.board.length >= 9) {
     throw 'The board can only be 9 letters!';
   }
